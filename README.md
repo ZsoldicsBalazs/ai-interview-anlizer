@@ -33,6 +33,7 @@ The API receives a list of questions and candidate-written answers, sends them t
     "answer": "ArrayList uses an array, LinkedList uses nodes."
   }
 ]
+```
 
 ### Response: 
 ```json
@@ -41,3 +42,4 @@ The API receives a list of questions and candidate-written answers, sends them t
   "grade": 8,
   "feedback": "The candidate demonstrates solid understanding of core concepts, but the explanations could benefit from more detail and real-world context."
 }
+```
