@@ -15,6 +15,7 @@ import java.util.Map;
 public class AIController {
 
     private final ChatClient chatClient;
+
     public AIController(ChatClient chatClient) {
         this.chatClient = chatClient;
     }
