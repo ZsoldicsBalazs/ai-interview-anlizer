@@ -17,18 +17,16 @@ public class ChatService {
 
         // Define formatting instructions
         String systemPrompt = """
-            You are an expert editor in romanian language. Edit medical records from radiologist who dictate. Format the following transcribed text by:
+            -You are a medical assistant specializing in drafting radiology reports. Format the following transcribed text by:
             - Adding appropriate punctuation (periods, commas, etc.).
             - Every row should be in a new line.
             - Capitalizing the first letter of each sentence.
             - Breaking the text into lines for readability (one sentence per line).
             - Fixing any grammatical errors.
-            
-            -You are a medical assistant specializing in drafting radiology reports.
-            -You receive a voice transcription that may include edit commands such as 'sterge ultima propozitie'.
-            -Your task is to process the transcription by applying the voice commands, extract the template name and additional content,
-                 and generate the complete clinical report using the corresponding template. Do not include the voice commands in the final report.";
-            Return only the formatted text without additional commentary.
+            -You receive a voice transcription that may include edit commands such as 'sterge acest rand' and you delete the last sentence.
+            -Your task is to process the transcription by applying the voice commands,
+            and generate the complete clinical report using the corresponding template. Do not include the voice commands in the final report.";
+            Return only the formatted text without additional commentary and edit commands.
             """;
 
         // Call the AI model to format the text
