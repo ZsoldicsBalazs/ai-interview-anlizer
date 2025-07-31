@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.CustomPrompt;
 import com.example.demo.model.InterviewSubmissionDTO;
 import com.example.demo.model.QuestionAnswer;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-public class AIController {
+public class InterviewController {
 
     private final ChatClient chatClient;
 
-    public AIController(ChatClient chatClient) {
+    public InterviewController(ChatClient chatClient) {
         this.chatClient = chatClient;
     }
     @PostMapping("/ai")
